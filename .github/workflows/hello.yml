@@ -1,0 +1,25 @@
+# workflow
+#should have a name
+name: Hello
+# ON TELLS WHEN   The workflows will run
+on:
+  workflow_dispatch:
+    
+
+# jobs -> what the workflow should do there can be multiple job
+# should be inside the workflows
+jobs:
+  #1st job
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say name to everyone
+        run: echo "hello dosto"
+
+
+# steps
+# should be inside the jobs
+
+# actions
+# should be inside the steps
