@@ -1,4 +1,8 @@
 jobs:
+
+on:
+  workflow_dispatch:
+    
   code:
     runs-on: ubuntu-latest
 
