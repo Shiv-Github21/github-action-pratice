@@ -1,5 +1,7 @@
-#Git-Action Pratices
-##concepts
+# Git-Action Pratices
 
-1.workflows
+## concepts
 
+## 1.workflows
+
+T0 create a github workflow actions you need to create a folder called : `/github/workflows`
