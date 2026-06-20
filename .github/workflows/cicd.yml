@@ -1,0 +1,28 @@
+jobs:
+  code:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone the code
+        run: echo "cloning the code"
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Build application
+        run: echo "building the application"
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test the code
+        run: echo "testing the app"
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy the code
+        run: echo "deploying the app"
