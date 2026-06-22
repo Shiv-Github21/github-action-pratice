@@ -1,0 +1,12 @@
+name: welcome
+
+on:
+    workflow_dispatch:
+
+jobs:
+  display-welcome-mssg:
+   runs-on: ubuntu-latest
+
+   steps:  
+    - name: welcoming text
+      run: echo "welcome on board"
