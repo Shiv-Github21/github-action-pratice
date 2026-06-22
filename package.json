@@ -1,0 +1,12 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Simple Node.js system information application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+  },
+  "author": "Shiv",
+  "license": "ISC"
+}
