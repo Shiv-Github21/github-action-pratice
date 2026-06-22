@@ -1,0 +1,24 @@
+name: python-linter
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  pyhton-linter:
+    runs-on: ubuntu-latest
+    
+ steps:
+  - name: Clone Public Repo
+    uses: actions/checkout@v7
+    
+  - name: Set up Python
+    uses: actions/setup-python@v5
+    with:
+     python-version: "3.12"
+  - name: Install Linter
+    run: pip install ruff
+  - name: Check the py file
+    run: ruff .
+      
+    
