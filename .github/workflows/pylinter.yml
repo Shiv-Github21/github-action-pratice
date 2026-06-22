@@ -2,8 +2,8 @@ name: python-linter
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      "*.py"
 
 jobs:
   python-linter:
@@ -22,4 +22,4 @@ jobs:
         run: pip install ruff
 
       - name: Check Python Files
-        run: ruff .
+        run: ruff check .
