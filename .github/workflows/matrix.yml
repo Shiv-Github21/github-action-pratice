@@ -12,7 +12,7 @@ jobs:
 
      steps:
        - name: checkout-code
-         uses: action/checkout@v7
+         uses: actions/checkout@v4
 
        - name: installing/setup python version
          uses: actions/setup-python@v5
