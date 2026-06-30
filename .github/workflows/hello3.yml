@@ -20,8 +20,8 @@ jobs:
         run: echo "Formatted date is $(date +'%Y-%m-%d %H:%M:%S')"
       - name: Print the branch name
         run: echo "The triggering branch is ${{ github.ref_name }}"
-      - name: creating a error to break pipeline
-        run: exit 1
+      # - name: creating a error to break pipeline
+      #   run: exit 1
       - name: Print and Check OS
         run: |
           echo "The runner OS is $RUNNER_OS"
