@@ -11,4 +11,27 @@ jobs:
      - name: intro
        run: echo "Hello from GitHub Actions"
 
+  update-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout/cloning
+        uses: actions/checkout@v7
+      - name: curr-date-time
+        run: echo "Formatted date is $(date +'%Y-%m-%d %H:%M:%S')"
+      - name: Print the branch name
+        run: echo "The triggering branch is ${{ github.ref_name }}"
+      - name: Print and Check OS
+        run: |
+          echo "The runner OS is $RUNNER_OS"
+          
+          if [ "$RUNNER_OS" == "Linux" ]; then
+             echo "This is a Linux runner"
+          elif [ "$RUNNER_OS" == "Windows" ]; then
+             echo "This is a Windows runner"
+          elif [ "$RUNNER_OS" == "macOS" ]; then
+             echo "This is a macOS runner"
+          fi
+
+       
+
     
