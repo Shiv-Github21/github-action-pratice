@@ -1,0 +1,21 @@
+name: manual-trigger
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Enter the env variable"
+        required: true
+        type: choice
+        options:
+          - staging-Area
+          - Production
+jobs:
+ print-environment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print-env-variable
+        run: | 
+         echo "Selected environment: ${{ inputs.environment }}"
+  
