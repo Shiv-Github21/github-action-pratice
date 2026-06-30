@@ -1,0 +1,22 @@
+name: PR Quality Check
+
+# Trigger the workflow on pull requests targeting the main branch
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - main
+
+jobs:
+  PR-Checking:
+    runs-on: ubuntu-latest
+    steps:
+     - name: checkout/clone
+       uses: actions/checkout@v7
+
+     - name: check the PR branch
+       run: |
+          echo "The PR is trying to merge from: ${{ github.event.pull_request.head.ref }}"
+          echo "The PR is targeting the branch: ${{ github.event.pull_request.base.ref }}"
+      
+  
